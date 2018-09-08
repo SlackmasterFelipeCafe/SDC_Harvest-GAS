@@ -102,3 +102,35 @@ Generic JSON Parser not being used by this project but needs to be tested more. 
  * @return a two-dimensional array containing the data, with the first row containing headers
  * @customfunction
  **/
+ /**
+ * An advanced version of ImportJSON designed to be easily extended by a script. This version cannot be called from within a 
+ * spreadsheet.
+ *
+ * Imports a JSON feed and returns the results to be inserted into a Google Spreadsheet. The JSON feed is flattened to create 
+ * a two-dimensional array. The first row contains the headers, with each column header indicating the path to that data in 
+ * the JSON feed. The remaining rows contain the data. 
+ *
+ * Use the include and transformation functions to determine what to include in the import and how to transform the data after it is
+ * imported. 
+ *
+ * For example:
+ *
+ *   =ImportJSON("http://gdata.youtube.com/feeds/api/standardfeeds/most_popular?v=2&alt=json", 
+ *               "/feed/entry",
+ *                function (query, path) { return path.indexOf(query) == 0; },
+ *                function (data, row, column) { data[row][column] = data[row][column].toString().substr(0, 100); } )
+ *
+ * In this example, the import function checks to see if the path to the data being imported starts with the query. The transform 
+ * function takes the data and truncates it. For more robust versions of these functions, see the internal code of this library.
+ *
+ * @param {url}           the URL to a public JSON feed
+ * @param {query}         the query passed to the include function
+ * @param {options}       a comma-separated list of options that may alter processing of the data
+ * @param {includeFunc}   a function with the signature func(query, path, options) that returns true if the data element at the given path
+ *                        should be included or false otherwise. 
+ * @param {transformFunc} a function with the signature func(data, row, column, options) where data is a 2-dimensional array of the data 
+ *                        and row & column are the current row and column being processed. Any return value is ignored. Note that row 0 
+ *                        contains the headers for the data, so test for row==0 to process headers only.
+ *
+ * @return a two-dimensional array containing the data, with the first row containing headers
+ **/
