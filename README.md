@@ -24,3 +24,25 @@ Google sheet functions that sets up queries of the Science Data Catalog for a li
 - **addJSON**, function that determines were to insert SDC JSON queries
 
 - **loadJSONvalues**, function that calls JSON import from SDC 
+
+## GetJSON:
+
+Generic JSON Parser not being used by this project but needs to be tested more.  Functions include:
+
+- **getJSON**
+
+- **insertData**
+
+- **setRowsData**
+
+- **getObjects**
+
+- **isCellEmpty**
+
+- **isAlpha**
+
+- **isDigit**
+
+- **chunk**
+
+- **normalizeHeader**
