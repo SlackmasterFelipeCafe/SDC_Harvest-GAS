@@ -1,5 +1,5 @@
 # SDC_Harvest-GAS
-GGGSC SDC HarvestGAS - Google Application Scripts being used by the GGGSC for tracking Data releases in the Science Data Catalog
+GGGSC SDC HarvestGAS - Google Application Scripts being used by the GGGSC for tracking Data releases and Harvesting records from the Science Data Catalog
 US Geological Survey (USGS)
 
 Geology, Geophysics, and Geochemistry Science Center (GGGSC)
