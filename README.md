@@ -48,9 +48,9 @@ Generic JSON Parser not being used by this project but needs to be tested more. 
 - **normalizeHeader**
 
 ## ImportJSON:
-  ==================================================================================================================================== 
-  ImportJSON by Trevor Lohrbeer (@FastFedora)
-  ====================================================================================================================================
+
+  **ImportJSON by Trevor Lohrbeer (@FastFedora)
+
   Version:      1.1
   Project Page: http://blog.fastfedora.com/projects/import-json
   Copyright:    (c) 2012 by Trevor Lohrbeer
